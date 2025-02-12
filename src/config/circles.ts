@@ -1,10 +1,5 @@
+import { createCirclesClient } from '@circles-sdk/sdk';
 
-import { Circles } from '@circles-sdk/sdk';
-
-type CirclesConfig = {
-  apiKey: string;
-};
-
-export const circles = new Circles({
+export const circles = createCirclesClient({
   apiKey: process.env.CIRCLES_API_KEY as string,
-} as CirclesConfig);
+});
