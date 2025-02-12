@@ -3,7 +3,7 @@
 ## 1. User Profile
 - A user can be both a **learner** and a **course creator**.
 - A user’s **wallet address** is used for authentication and transactions.
-- Users can have courses they **created** and courses they are **enrolled in**.
+- The user dashboard can have courses the they **created** but cannot enroll on them and courses they are **enrolled in**.
 
 ### Profile Fields:
 - **walletAddress**: Used for login (connected wallet).
