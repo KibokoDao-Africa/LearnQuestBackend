@@ -25,9 +25,9 @@
     "@types/express": "^5.0.0",
     "@types/mongoose": "^5.11.97",
     "@types/node": "^22.13.1",
-    "typescript": "^5.7.3",
+    "nodemon": "^3.1.9",
     "ts-node": "^10.9.2",
-    "nodemon": "^3.0.1"
+    "typescript": "^5.7.3"
   },
   "dependencies": {
     "@circles-sdk/sdk": "^0.15.2",
