@@ -1,10 +1,12 @@
 import { ethers } from 'ethers';
 
-const provider = new ethers.JsonRpcProvider('https://your-ethereum-node-url');
-const signer = new ethers.Wallet('your-private-key', provider);
+const provider = new ethers.JsonRpcProvider(process.env.ETHEREUM_NODE_URL);
+const signer = new ethers.Wallet(process.env.PRIVATE_KEY as string, provider);
+
 
 const contractAddress = 'your-contract-address';
 const contractABI = [
+
 {
 "inputs": [
 { "internalType": "uint256", "name": "enrollmentId", "type": "uint256" },
