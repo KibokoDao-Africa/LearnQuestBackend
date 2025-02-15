@@ -3,8 +3,16 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const provider = new ethers.JsonRpcProvider(process.env.NETWORK_URL);
-const signer = new ethers.Wallet(process.env.PRIVATE_KEY as string, provider);
+if (!process.env.PRIVATE_KEY) {
+  throw new Error("Missing PRIVATE_KEY in environment variables");
+}
+
+if (!process.env.NETWORK_URL) {
+  throw new Error("Missing NETWORK_URL in environment variables");
+}
+
+const provider = new ethers.JsonRpcProvider(process.env.NETWORK_URL.trim());
+const signer = new ethers.Wallet(process.env.PRIVATE_KEY.trim(), provider);
 
 const contractAddress = 'your-contract-address';
 const contractABI = [
